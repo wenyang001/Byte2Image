@@ -43,36 +43,22 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-repository/Byte2Image.git
 cd Byte2Image
+```
 
 ## Training
 
-To train the model on your dataset, run:
+To train the model on the dataset, run:
 
-$$
-\texttt{python train.py --data\_path <path\_to\_dataset> --save\_dir <path\_to\_save\_checkpoints> --batch\_size 32 --epochs 50}
-$$
-
-Example:
-
-$$
-\texttt{python train.py --data\_path ./data/train --save\_dir ./checkpoints --batch\_size 32 --epochs 50}
-$$
-
----
+```
+python train_resnet_512.py --phase test --name ResNet_512/3 --gpu_ids 0,1 --data 512 --scen 3
+```
 
 ## Testing
 
 To evaluate the model on the test dataset, run:
-
-$$
-\texttt{python test.py --data\_path <path\_to\_test\_dataset> --checkpoint <path\_to\_checkpoint>}
-$$
-
-Example:
-
-$$
-\texttt{python test.py --data\_path ./data/test --checkpoint ./checkpoints/model\_best.pth}
-$$
+```
+python train_resnet_512.py --phase train --name ResNet_512/3 --gpu_ids 0,1 --data 512 --scen 3
+```
 
 ---
 
@@ -80,7 +66,7 @@ $$
 
 Download the pretrained checkpoints from the link below:
 
-[Pretrained Checkpoints](https://your-link-to-checkpoints.com)
+[Pretrained Checkpoints](https://drive.google.com/file/d/1e_Ou7UDajOGCLaCy-KYgmSOYcjFQnj3g/view?usp=sharing)
 
 ---
 
