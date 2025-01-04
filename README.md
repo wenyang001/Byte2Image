@@ -1,14 +1,21 @@
-## Byte2Image
-**A Byte Sequence is Worth an Image: CNN for File Fragment Classification Using Bit Shift and n-Gram Embeddings**    
-*Wenyang Liu, Yi Wang, Kejun Wu, Kim-Hui Yap and Lap-Pui Chau*   
+# Byte2Image
+
+**A Byte Sequence is Worth an Image: CNN for File Fragment Classification Using Bit Shift and n-Gram Embeddings**  
+*Wenyang Liu, Yi Wang, Kejun Wu, Kim-Hui Yap and Lap-Pui Chau*  
 Accepted in AICAS2023
 
-**ByteNet: Rethinking Multimedia File Fragment Classification through Visual Perspectives**
+**ByteNet: Rethinking Multimedia File Fragment Classification through Visual Perspectives**  
 *Wenyang Liu, Kejun Wu, Tianyi Liu, Yi Wang, Kim-Hui Yap and Lap-Pui Chau*  
 The extended version is accepted in IEEE Transactions on Multimedia (TMM) 2024
 
+---
 
-## Overall 
+## Introduction
+
+This repository contains the official implementation of **Byte2Image**, a framework for multimedia file fragment classification that leverages visual-based methods. It supports:
+- **ByteNet**, which employs CNN-based architectures for classification.
+- **Advanced bit-shift and n-gram embeddings**, providing robust feature representation for byte sequences.
+ 
 ### Motivation
 <div align="center">
   <img src="./figures/Intro.png" alt="Alt text" width="70%">
@@ -24,6 +31,58 @@ Multimedia content carried in a network packet or storage sector can be seen as 
 ### Result on FFT-75 Dataset
 ![Alt text](./figures/Results.png)  
 
+
+---
+
+## Getting Started
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-repository/Byte2Image.git
+cd Byte2Image
+
+## Training
+
+To train the model on your dataset, run:
+
+$$
+\texttt{python train.py --data\_path <path\_to\_dataset> --save\_dir <path\_to\_save\_checkpoints> --batch\_size 32 --epochs 50}
+$$
+
+Example:
+
+$$
+\texttt{python train.py --data\_path ./data/train --save\_dir ./checkpoints --batch\_size 32 --epochs 50}
+$$
+
+---
+
+## Testing
+
+To evaluate the model on the test dataset, run:
+
+$$
+\texttt{python test.py --data\_path <path\_to\_test\_dataset> --checkpoint <path\_to\_checkpoint>}
+$$
+
+Example:
+
+$$
+\texttt{python test.py --data\_path ./data/test --checkpoint ./checkpoints/model\_best.pth}
+$$
+
+---
+
+## Pretrained Checkpoints
+
+Download the pretrained checkpoints from the link below:
+
+[Pretrained Checkpoints](https://your-link-to-checkpoints.com)
+
+---
 
 ## Citing Our Work
 ```
