@@ -50,14 +50,14 @@ cd Byte2Image
 To train the model on the dataset, run:
 
 ```
-python train_resnet_512.py --phase test --name ResNet_512/3 --gpu_ids 0,1 --data 512 --scen 3
+python train_resnet_512.py --phase train --name ResNet_512/3 --gpu_ids 0,1 --data 512 --scen 3
 ```
 
 ## Testing
 
 To evaluate the model on the test dataset, run:
 ```
-python train_resnet_512.py --phase train --name ResNet_512/3 --gpu_ids 0,1 --data 512 --scen 3
+python train_resnet_512.py --phase test --name ResNet_512/3 --gpu_ids 0,1 --data 512 --scen 3
 ```
 
 ---
