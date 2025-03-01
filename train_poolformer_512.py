@@ -220,7 +220,7 @@ def opt_parse():
 
 
     # mixup/cutmix
-    parser.add_argument('--mixup_active', action='store_true', default=False,
+    parser.add_argument('--mixup_active', action='store_true', default=True,
                        help='disable mixup training')  # 触发为真
     parser.add_argument('--mixup', type=float, default=0.8,
                        help='mixup alpha, mixup enabled if > 0. (default: 0.8)')
